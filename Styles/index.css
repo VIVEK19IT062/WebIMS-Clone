@@ -1,67 +1,71 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #ccc;
+  font-family: "Arial", Serif;
+  background-color: #cdc7c7;
+  overflow-x: hidden;
 }
-
-.nav ul {
-  list-style: none;
-  background-color: rgb(250, 247, 247);
-  padding: 0;
-  margin: 0;
+.navbar {
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 63px;
 }
-.nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  text-align: center;
-  height: 40px;
-  border-bottom: 1px solid #888;
-}
-   
-.nav a {
-  text-decoration: none;
-  color: rgb(19, 1, 1);
+.navbar a {
+  float: left;
   display: block;
-  transition: .3s background-color;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
 }
-   
-.nav a:hover {
-  background-color: #ccc;
+.navbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
 }
-   
-.nav a.active {
-  background-color: #fff;
-  color: #444;
-  cursor: default;
+.navbar a:hover {
+  background-color: #ddd;
+  border-radius: 40px;
+  color: #000;
+  transition: 0.3s;
 }
-   
-@media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
+.menu-icon {
+  font-size: 2rem;
 }
-   
-/* Option 1 - Display Inline */
-.nav li {
-  display: inline-block;
-  margin-right: -4px;
+.side-nav {
+  height: 100%;
+  width: 250px;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  box-shadow: 2px 2px 15px grey
 }
-   
-    /* Options 2 - Float
-    .nav li {
-      float: left;
-    }
-    .nav ul {
-      overflow: auto;
-      width: 600px;
-      margin: 0 auto;
-    }
-    .nav {
-      background-color: #444;
-    }
-    */
-  }
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #555;
+  display: block;
+  transition: 0.3s;
+}
+.side-nav a:hover {
+  color: #333;
+}
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  margin-Left: 250px
+}
