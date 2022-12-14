@@ -2,22 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="stylesheet" href="../Styles//index.css">
+    <title>WebIMS</title>
 </head>
 <body>
     <header>
-        <div class="nav">
-          <ul>
-            <li class="home"><a href="#">Home</a></li>
-            <li class="tutorials"><a class="active" href="#">Home</a></li>
-            <li class="about"><a href="#">Home</a></li>
-            <li class="news"><a href="#">Home</a></li>
-            <li class="contact"><a href="#">Home</a></li>
-          </ul>
-        </div>
+      <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSideMenu()">
+                <!-- https://ionicons.com/ -->
+                <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+            </a>
+        </span>
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="main">
+        <h1>WEBIMS</h1>
+    </div>
+    <script>
+        function openSideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+        function closeSideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+    </script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 </html>
